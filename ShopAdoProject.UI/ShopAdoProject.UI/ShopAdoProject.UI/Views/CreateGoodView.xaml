@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ShopAdoProject.UI.Views.CreateGoodView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ShopAdoProject.UI.Views"
+             xmlns:vm="clr-namespace:ShopAdoProject.UI.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource locator}, Path=CreateGoodViewModel}">
+    
+    <Grid>
+        <StackPanel Width="300">
+            <Label>Название товара</Label>
+            <TextBox Text="{Binding SelectedGood.GoodName}"></TextBox>
+            <Label>Цена</Label>
+            <TextBox Text="{Binding SelectedGood.Price}"></TextBox>
+            <Label>Количество</Label>
+            <TextBox Text="{Binding SelectedGood.GoodCount}"></TextBox>
+
+            <Button Margin="10"
+                    Command="{Binding AddGoodCommand}">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

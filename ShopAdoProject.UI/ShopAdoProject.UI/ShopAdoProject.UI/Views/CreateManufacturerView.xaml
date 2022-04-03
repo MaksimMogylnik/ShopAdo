@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ShopAdoProject.UI.Views.CreateManufacturerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ShopAdoProject.UI.Views"
+             xmlns:vm="clr-namespace:ShopAdoProject.UI.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource locator}, Path=CreateManufacturerViewModel}">
+    <Grid>
+        <StackPanel Width="300">
+            <Label>Название производителя</Label>
+            <TextBox Text="{Binding SelectedManufacturer.ManufacturerName}"></TextBox>
+
+            <Button Margin="10"
+                    Command="{Binding AddManufacturerCommand}">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
